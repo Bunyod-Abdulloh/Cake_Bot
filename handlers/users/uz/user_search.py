@@ -16,10 +16,13 @@ async def get_photo_id(message: types.Message):
     # await db.add_company(
     #     name=name, image=file_id
     # )
-    clinics = await db.select_all_clinics()
-    print(clinics)
+    # clinics = await db.select_all_clinics()
+    # print(clinics)
     await message.answer(
-        text="Bazaga qo'shildi!"
+        text="Bu caption!",
+        link_preview_options=types.LinkPreviewOptions(
+            url="https://i1.wp.com/mohirdev.uz/wp-content/uploads/Telegram-bot.png"
+        )
     )
 
 
